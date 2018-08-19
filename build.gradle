@@ -33,8 +33,6 @@ dependencies {
     compile('org.springframework.boot:spring-boot-starter-data-jpa')
     compile("org.springframework.data:spring-data-jpa")
     compile("com.h2database:h2")
-    compile("org.springframework.integration:spring-integration-jpa")
-    //testCompile('org.springframework.boot:spring-boot-starter-test')
 
 }
 

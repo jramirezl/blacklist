@@ -5,7 +5,7 @@ import com.finereach.test.ipblacklist.entity.IpBlock;
 import java.util.List;
 
 public interface BlacklListService {
-    public IpBlock addIpBlacklist(String ip);
+    public IpBlock addIpBlacklist(IpBlock ipBlock);
     public void deleteIpBlacklist(String ip);
     public List<IpBlock> getBlacklist();
     public IpBlock getIpBlacklist(String ip);

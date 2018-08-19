@@ -16,8 +16,7 @@ public class BlacklListServiceImpl implements BlacklListService {
 
 
     @Override
-    public IpBlock addIpBlacklist(String ip) {
-        IpBlock ipBlock =  IpBlock.builder().ip(ip).build();
+    public IpBlock addIpBlacklist(IpBlock ipBlock) {
         return ipBlackListRepository.save(ipBlock);
     }
 

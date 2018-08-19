@@ -51,7 +51,9 @@ public class BlacklistConfigurationController {
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
     public IpBlock create(@RequestBody String ip) {
-        return blacklListService.addIpBlacklist(ip);
+        IpBlock ipBlock = IpBlock.builder().ip(ip.split("=")[1]).build();
+        IpBlock ipBlock1 =  blacklListService.addIpBlacklist(ipBlock);
+        return ipBlock1;
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
